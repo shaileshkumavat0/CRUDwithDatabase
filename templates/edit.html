@@ -2,33 +2,100 @@
 <html>
 <head>
 <title>Edit Student</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background:#f2f2f2;
+}
+
+.container{
+    width:350px;
+    margin:auto;
+    margin-top:80px;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0px 0px 10px gray;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+label{
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:#28a745;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#218838;
+}
+
+.back{
+    text-align:center;
+    margin-top:15px;
+}
+
+.back a{
+    text-decoration:none;
+    color:#007bff;
+}
+
+</style>
+
 </head>
 
 <body>
+
+<div class="container">
 
 <h2>Edit Student</h2>
 
 <form action="/update/{{ student.roll_no }}" method="POST">
 
-Roll No<br>
-<input type="text" value="{{ student.roll_no }}" disabled><br><br>
+<label>Roll Number</label>
+<input type="text" value="{{ student.roll_no }}" disabled>
 
-Name<br>
-<input type="text" name="name" value="{{ student.name }}"><br><br>
+<label>Name</label>
+<input type="text" name="name" value="{{ student.name }}" required>
 
-Age<br>
-<input type="number" name="age" value="{{ student.age }}"><br><br>
+<label>Age</label>
+<input type="number" name="age" value="{{ student.age }}" required>
 
-Marks<br>
-<input type="number" name="marks" value="{{ student.marks }}"><br><br>
+<label>Marks</label>
+<input type="number" name="marks" value="{{ student.marks }}" required>
 
 <button type="submit">Update Student</button>
 
 </form>
 
-<br>
+<div class="back">
+<a href="/students">⬅ Back to Students</a>
+</div>
 
-<a href="/students">Back</a>
+</div>
 
 </body>
 </html>
