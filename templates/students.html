@@ -2,36 +2,43 @@
 <html>
 <head>
 <title>Students List</title>
-<style>
-body{font-family:Arial;text-align:center;background:#f2f2f2;}
-table{margin:auto;border-collapse:collapse;}
-th,td{padding:10px;border:1px solid black;}
-button{padding:5px 10px;background:red;color:white;border:none;cursor:pointer;}
-</style>
 </head>
+
 <body>
+
 <h2>Students List</h2>
-<table>
+
+<table border="1" cellpadding="10">
+
 <tr>
 <th>Roll No</th>
 <th>Name</th>
+<th>Age</th>
 <th>Marks</th>
-<th>Edit</th>
 <th>Action</th>
 </tr>
+
 {% for s in students %}
+
 <tr>
 <td>{{ s.roll_no }}</td>
 <td>{{ s.name }}</td>
+<td>{{ s.age }}</td>
 <td>{{ s.marks }}</td>
-<td><a href="/edit/{{s.roll_no}}">Edit</a></td>
+
 <td>
-<a href="/delete/{{ s.roll_no }}"><button>Delete</button></a>
+<a href="/delete/{{ s.roll_no }}">Delete</a>
 </td>
+
 </tr>
+
 {% endfor %}
+
 </table>
+
 <br>
-<a href="/"><button>Add More Students</button></a>
+
+<a href="/">Add New Student</a>
+
 </body>
 </html>
