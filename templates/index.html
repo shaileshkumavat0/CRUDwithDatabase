@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Management</title>
+<style>
+body{font-family:Arial;text-align:center;background:#f2f2f2;}
+h1{color:#333;}
+input,button{padding:10px;margin:5px;}
+button{background:brown;color:white;border:none;cursor:pointer;}
+</style>
+</head>
+<body>
+<h1>Student Management System</h1>
+<form action="/add" method="POST">
+<input type="number" name="roll" placeholder="Roll No" required>
+<input type="text" name="name" placeholder="Name" required>
+<input type="number" name="marks" placeholder="Marks" required>
+<button type="submit">Add Student</button>
+</form>
+<br>
+<a href="/students"><button>View Students</button></a>
+</body>
+</html>

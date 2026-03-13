@@ -1,0 +1,17 @@
+<form action="/update/{{student.roll_no}}" method="POST">
+
+Name<br>
+<input type="text" name="name" value="{{student.name}}" required><br><br>
+
+Marks<br>
+<input type="number" name="marks" value="{{student.marks}}" required><br><br>
+
+Age<br>
+<input type="number" name="age" value="{{student.age}}" required><br><br>
+
+Course<br>
+<input type="text" name="course" value="{{student.course}}" required><br><br>
+
+<button type="submit">Update Student</button>
+
+</form>
